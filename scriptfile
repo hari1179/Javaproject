@@ -1,0 +1,12 @@
+currentBuild.displayName = "javaproject-#"+currentBuild.number
+
+pipeline {  
+    agent any  
+    stages {  
+            stage ('git checkout') {  
+                steps {  
+                        git credentialsId: 'credentials', url: 'https://github.com/hari1179/javaproject.git'
+                }  
+            }  
+    }  
+} 
